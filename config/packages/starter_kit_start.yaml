@@ -1,0 +1,26 @@
+starter_kit_start:
+
+    login_url: '/login'
+
+    jws_ttl: '%env(int:JWS_TTL)%'
+    refresh_token_ttl: '%env(int:REFRESH_TOKEN_TTL)%'
+
+    jws_pass_phrase: '%env(JWS_PASS_PHRASE)%'
+
+    user_class: '%env(USER_CLASS)%'
+
+    facebook_app_secret: '%env(FACEBOOK_APP_SECRET)%'
+    facebook_api_version: '%env(FACEBOOK_API_VERSION)%'
+    facebook_app_id: '%env(FACEBOOK_APP_ID)%'
+
+    google_client_id: '%env(GOOGLE_CLIENT_ID)%'
+
+
+    aws_api_version: '%env(AWS_VERSION)%'
+    aws_key: '%env(AWS_KEY)%'
+    aws_secret: '%env(AWS_SECRET)%'
+    aws_region: '%env(AWS_REGION)%'
+    aws_s3_bucket_name: '%env(AWS_BUCKET)%'
+
+    slack_client_secret: '%env(SLACK_CLIENT_KEY)%'
+    slack_client_id: '%env(SLACK_CLIENT_ID)%'

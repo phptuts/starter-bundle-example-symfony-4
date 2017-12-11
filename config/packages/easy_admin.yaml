@@ -1,0 +1,19 @@
+easy_admin:
+    entities:
+        Users:
+            controller: App\Controller\Admin\UserController
+            class: App\Entity\User
+            disabled_actions: ['delete']
+            form:
+                form_options: { validation_groups: ['user_default_validation_group', 'user_plain_password'] }
+                fields:
+                    - displayName
+                    - email
+                    - { property: 'plainPassword', label: 'Password', type: 'password'}
+                    - { property: 'roles', type: 'choice', type_options: { multiple: true, choices: { 'ROLE_USER': 'ROLE_USER', 'ROLE_ADMIN': 'ROLE_ADMIN' } } }
+
+            list:
+                fields: ['email', 'displayName', 'roles', 'enabled', 'source']
+                actions:
+                    - { name: 'edit', icon: 'pencil', label: '' }
+    site_name: 'Admin'

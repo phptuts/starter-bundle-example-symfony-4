@@ -1,0 +1,15 @@
+nelmio_api_doc:
+    routes:
+        path_patterns: # an array of regexps
+            - ^/(api(?!-docs))
+            - ^/oauth
+            - ^/login_check
+            - ^/access-tokens
+
+
+    models: { use_jms: false }
+    documentation:
+        info:
+            title: 'Symfony Starter Api'
+            description: 'Our Symfony Starter Kit Api Documentation.'
+            version: 1.0.0

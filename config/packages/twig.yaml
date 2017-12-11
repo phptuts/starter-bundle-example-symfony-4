@@ -1,0 +1,14 @@
+twig:
+    paths: ['%kernel.project_dir%/templates']
+    debug: '%kernel.debug%'
+    strict_variables: '%kernel.debug%'
+    globals:
+        facebook_app_id: '%env(FACEBOOK_APP_ID)%'
+        facebook_api_version: '%env(FACEBOOK_API_VERSION)%'
+        email: '%env(APP_EMAIL)%'
+        google_client_id: '%env(GOOGLE_CLIENT_ID)%'
+        slack_client_id: '%env(SLACK_CLIENT_ID)%'
+    form_themes:
+        - 'bootstrap_3_layout.html.twig'
+        - 'form/fields.html.twig'
+

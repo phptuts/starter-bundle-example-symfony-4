@@ -1,0 +1,5 @@
+security:
+    encoders:
+        StarterKit\StartBundle\Tests\Entity\User:
+            algorithm: bcrypt
+            cost: 12

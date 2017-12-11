@@ -1,0 +1,8 @@
+App\Entity\User:
+    refresh_token_user:
+        email: 'admin@not-real-domain.com'
+        password: '\$2a\$12\$JO7QBUxZb1nsKupfz/DG..GmP4gsWMmaZ41oUt7MUf0Ot4yuZM46m'
+        roles: ['ROLE_ADMIN']
+        enabled: true
+        source: 'website'
+

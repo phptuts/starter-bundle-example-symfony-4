@@ -1,0 +1,39 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Home Page{% endblock %}
+
+
+{% block body %}
+    <div class="container">
+
+        <h1><a href="https://github.com/phptuts/StarterBundleForSymfony">Starter Kit Bundle For Symfony Projects.</a></h1>
+
+        <h2><a href="https://github.com/phptuts/starter-bundle-example">Example Code</a></h2>
+
+        <h2>This comes with</h2>
+
+        <ul>
+            <li>Response Envelopes</li>
+            <li>Authentication</li>
+            <li>Third Party Auth including Oauth with built providers
+                <ul>
+                    <li>Slack</li>
+                    <li>Google</li>
+                    <li>Facebook</li>
+                </ul>
+            </li>
+            <li>Email / Password Authentication</li>
+            <li>JWT / JWS Tokens</li>
+            <li>Refresh Tokens</li>
+            <li>Easy Admin Setup with example code</li>
+            <li>Password Reset Work Flows</li>
+            <li>Stateless Authentication</li>
+            <li>100% Tested Bundle</li>
+            <li>We have documentation!!!</li>
+        </ul>
+
+        <h2>Official Logo</h2>
+
+        <img src="{{ asset('assets/images/logo.png') }}" />
+    </div>
+{% endblock %}
