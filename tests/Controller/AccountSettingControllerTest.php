@@ -50,6 +50,7 @@ class AccountSettingControllerTest extends BaseTestCase
             )
         );
 
+        dump($json);
 
         $crawler = $client->request('GET', '/account-settings/information');
         $this->assertStatusCode(200, $client);
