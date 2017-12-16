@@ -41,6 +41,8 @@ class AccountSettingControllerTest extends BaseTestCase
             ['email' => 'update_profile@gmail.com', 'password' => 'password']
         );
 
+        echo $response->getContent();
+
         $json = json_decode($response->getContent(), true);
 
         $client->getCookieJar()->set(new Cookie(
@@ -49,8 +51,6 @@ class AccountSettingControllerTest extends BaseTestCase
                 $json['data']['tokenModel']['expirationTimeStamp']
             )
         );
-
-        dump($json);
 
         $crawler = $client->request('GET', '/account-settings/information');
         $this->assertStatusCode(200, $client);
