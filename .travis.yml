@@ -1,0 +1,34 @@
+language: php
+
+php:
+  - 7.1
+
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+services:
+  - sqlite
+  - redis
+
+matrix:
+  include:
+    - php: 7.1
+  fast_finish: true
+
+install:
+  - composer update --prefer-dist
+
+before_script:
+  - cp .env.dist .env
+  - mkdir var/jwt
+  - cp scripts/private.pem var/jwt/private.pem
+  - cp scripts/public.pem var/jwt/public.pem
+  - sh scripts/run_before_travis.sh
+
+# In phpunit.xml.dist, tests annotated with "@group mysql" are excluded,
+# revert this.
+script:
+    - php bin/phpunit --exclude-group exclude_travis

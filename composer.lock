@@ -4070,12 +4070,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phptuts/StarterBundleForSymfony.git",
-                "reference": "b5494169885a4a062332dec72661f7314afd5473"
+                "reference": "deb12b3b7ceb46e5f110145ba938da60482e1a7d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phptuts/StarterBundleForSymfony/zipball/b5494169885a4a062332dec72661f7314afd5473",
-                "reference": "b5494169885a4a062332dec72661f7314afd5473",
+                "url": "https://api.github.com/repos/phptuts/StarterBundleForSymfony/zipball/deb12b3b7ceb46e5f110145ba938da60482e1a7d",
+                "reference": "deb12b3b7ceb46e5f110145ba938da60482e1a7d",
                 "shasum": ""
             },
             "require": {
@@ -4091,12 +4091,19 @@
                 "nelmio/api-doc-bundle": "~3.0@beta",
                 "php": ">=7.0.0",
                 "sensio/framework-extra-bundle": "3.0.*|^4.0",
+                "symfony/asset": "^4.0 | ^3.4",
                 "symfony/event-dispatcher": "~3.0|^4.0",
+                "symfony/expression-language": "^4.0 | ^3.4",
                 "symfony/form": "~3.0|^4.0",
                 "symfony/framework-bundle": "~3.0|^4.0",
+                "symfony/monolog-bundle": "^3.1",
                 "symfony/security-bundle": "3.4.*|^4.0",
+                "symfony/templating": "^4.0 | ^3.4",
                 "symfony/twig-bridge": "~3.0|^4.0",
-                "symfony/validator": "~3.0|^4.0"
+                "symfony/twig-bundle": "^4.0 |  ^3.4",
+                "symfony/validator": "~3.0|^4.0",
+                "symfony/var-dumper": "^4.0 | ^3.4",
+                "twig/twig": "^2.4"
             },
             "require-dev": {
                 "doctrine/doctrine-fixtures-bundle": "^2.3",
@@ -4110,11 +4117,8 @@
             "type": "symfony-bundle",
             "autoload": {
                 "psr-4": {
-                    "StarterKit\\StartBundle\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
+                    "StarterKit\\StartBundle\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -4131,7 +4135,7 @@
             "keywords": [
                 "User management"
             ],
-            "time": "2017-12-11T05:30:23+00:00"
+            "time": "2017-12-16T05:24:25+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -6667,6 +6671,61 @@
             "description": "Symfony SwiftmailerBundle",
             "homepage": "http://symfony.com",
             "time": "2017-10-23T15:15:11+00:00"
+        },
+        {
+            "name": "symfony/templating",
+            "version": "v4.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/templating.git",
+                "reference": "9651f8ee0ebe868571edda29f62f49eafc58b7b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/templating/zipball/9651f8ee0ebe868571edda29f62f49eafc58b7b3",
+                "reference": "9651f8ee0ebe868571edda29f62f49eafc58b7b3",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3"
+            },
+            "require-dev": {
+                "psr/log": "~1.0"
+            },
+            "suggest": {
+                "psr/log": "For using debug logging in loaders"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Templating\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Templating Component",
+            "homepage": "https://symfony.com",
+            "time": "2017-12-14T19:48:22+00:00"
         },
         {
             "name": "symfony/translation",
