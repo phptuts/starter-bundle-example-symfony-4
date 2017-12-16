@@ -41,8 +41,6 @@ class AccountSettingControllerTest extends BaseTestCase
             ['email' => 'update_profile@gmail.com', 'password' => 'password']
         );
 
-        echo $response->getContent();
-
         $json = json_decode($response->getContent(), true);
 
         $client->getCookieJar()->set(new Cookie(

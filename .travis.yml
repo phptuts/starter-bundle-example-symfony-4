@@ -32,3 +32,4 @@ before_script:
 # revert this.
 script:
     - php bin/phpunit --exclude-group exclude_travis
+    - cat var/log/test.log
