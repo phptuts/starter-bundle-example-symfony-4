@@ -1,6 +1,6 @@
 # Starter Bundle Symfony 4 Example
 
-[![Build Status](https://travis-ci.org/phptuts/starter-bundle-example.svg?branch=master)](https://travis-ci.org/phptuts/starter-bundle-example)
+[![Build Status](https://travis-ci.org/phptuts/starter-bundle-example-symfony-4.svg?branch=master)](https://travis-ci.org/phptuts/starter-bundle-example-symfony-4)
 
 ## [Starter Bundle For Symfony & Docs](https://github.com/phptuts/StarterBundleForSymfony)
 
