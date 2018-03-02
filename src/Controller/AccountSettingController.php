@@ -5,9 +5,9 @@ namespace App\Controller;
 use App\Entity\User;
 use StarterKit\StartBundle\Form\ChangePasswordType;
 use StarterKit\StartBundle\Form\UpdateUserType;
-use StarterKit\StartBundle\Service\S3ServiceInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use StarterKit\StartBundle\Service\FileUploadInterface;
 use StarterKit\StartBundle\Service\UserServiceInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -25,14 +25,14 @@ class AccountSettingController extends Controller
     private $userService;
 
     /**
-     * @var S3ServiceInterface
+     * @var FileUploadInterface
      */
-    private $s3Service;
+    private $fileUploadInterface;
 
-    public function __construct(UserServiceInterface $userService, S3ServiceInterface $s3Service)
+    public function __construct(UserServiceInterface $userService, FileUploadInterface $fileUploadInterface)
     {
         $this->userService = $userService;
-        $this->s3Service = $s3Service;
+        $this->fileUploadInterface = $fileUploadInterface;
     }
 
     /**
@@ -53,7 +53,7 @@ class AccountSettingController extends Controller
             /** @var User $user */
             $user = $form->getData();
             if (!empty($user->getImage())) {
-                $url = $this->s3Service->uploadFile($user->getImage(), 'profile_pics', md5($user->getId() . '_profile_id'));
+                $url = $this->fileUploadInterface->uploadFile($user->getImage(), 'profile_pics', md5($user->getId() . '_profile_id'));
                 $user->setImageUrl($url);
             }
 

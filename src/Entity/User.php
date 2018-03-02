@@ -4,6 +4,11 @@ namespace App\Entity;
 
 use StarterKit\StartBundle\Entity\BaseUser;
 use Doctrine\ORM\Mapping as ORM;
+use StarterKit\StartBundle\Entity\FacebookTrait;
+use StarterKit\StartBundle\Entity\GoogleTrait;
+use StarterKit\StartBundle\Entity\ImageTrait;
+use StarterKit\StartBundle\Entity\RefreshTokenTrait;
+use StarterKit\StartBundle\Entity\SlackTrait;
 
 /**
  * @ORM\Entity(repositoryClass="StarterKit\StartBundle\Repository\UserRepository")
@@ -22,5 +27,13 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class User extends BaseUser
 {
+    use GoogleTrait;
 
+    use FacebookTrait;
+
+    use ImageTrait;
+
+    use RefreshTokenTrait;
+
+    use SlackTrait;
 }
