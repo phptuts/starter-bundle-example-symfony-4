@@ -53,8 +53,10 @@ class AccountSettingController extends Controller
             /** @var User $user */
             $user = $form->getData();
             if (!empty($user->getImage())) {
-                $url = $this->fileUploadInterface->uploadFile($user->getImage(), 'profile_pics', md5($user->getId() . '_profile_id'));
-                $user->setImageUrl($url);
+                $fileUploadModel = $this->fileUploadInterface->uploadFileWithFolderAndName($user->getImage(), 'profile_pics', md5($user->getId() . '_profile_id'));
+                $user->setImageUrl($fileUploadModel->getUrl())
+                    ->setImageId($fileUploadModel->getFileId())
+                    ->setImageVendor($fileUploadModel->getVendor());
             }
 
             $this->userService->save($user);
